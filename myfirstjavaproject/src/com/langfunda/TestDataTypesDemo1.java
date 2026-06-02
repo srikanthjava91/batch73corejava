@@ -46,8 +46,29 @@ public class TestDataTypesDemo1 {
 	double d = 5.65676478765465;// By default RHS Decimal values are double
 	double d1 = f1;// Implicit Type casting
 
-	char c;
-	boolean boo;
+	// char 2 bytes --> 0 to 65535
+	char c = 'M';// Single quotes characters
+	char c1 = 6667;// ASCII code --> A=65 B=66......Z=90 & a=97 b=98 ....z=122
+	char c2 = '\u0021';// Unicode characters
+
+	int i3 = 'A';
+	int i4 = '\u0021';
+
+	float f3 = 'A';
+
+	boolean boo = true;
+
+	int i5 = 2147483647;//The literal 2147483648 of type int is out of range 
+	float f5 = 2147.4836478754F;//
+	
+//	all are invalid
+//	boolean b3 = 'true';
+//	boolean b4 = "true";
+//	boolean b5 = True;
+//	boolean b6 = TRUE;
+//	boolean b7 = FALSE;
+//	boolean b8 = 0;
+//	boolean b9 = 1;
 
 	public static void main(String[] args) {
 		System.out.println("main method started ");
@@ -59,18 +80,25 @@ public class TestDataTypesDemo1 {
 
 		System.out.println("int value : " + t1.i);// 0
 		System.out.println("int value : " + t1.i1);// 0
+		System.out.println("int value : " + t1.i3);// 0
 
 		System.out.println("long vlaue : " + t1.l);// 0
 		System.out.println("long vlaue : " + t1.l1);// 0
 
 		System.out.println("float value : " + t1.f);// 0.0
+		System.out.println("float value : " + t1.f3);// 0.0
 
 		System.out.println("float value : " + t1.f1);// 0.0
 		System.out.println("double value : " + t1.d);// 0.0
 		System.out.println("double value : " + t1.d1);// 0.0
 
 		System.out.println("char value : " + t1.c);//
+		System.out.println("char value : " + t1.c1);//
+		System.out.println("char value : " + t1.c2);//
 		System.out.println("boolean value : " + t1.boo);// false
+		
+		System.out.println(t1.f5);
+		System.out.println(t1.i5);
 
 	}
 
