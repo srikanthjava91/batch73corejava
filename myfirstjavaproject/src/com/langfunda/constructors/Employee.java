@@ -29,7 +29,7 @@ public class Employee {
 	}
 
 	void show() {
-
+		System.out.println("******************");
 		System.out.println("Employee ID : " + eid);
 		System.out.println("EMployee Nam e: " + ename);
 		System.out.println("Emploayee Salary : " + salary);
