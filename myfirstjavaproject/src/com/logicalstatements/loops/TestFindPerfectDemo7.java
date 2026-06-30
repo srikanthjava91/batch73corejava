@@ -2,7 +2,8 @@ package com.logicalstatements.loops;
 
 //Q) WAP to to find the Given number is Perfect or not ..? 
 
-//Perfect number  : The Given number is equals to Sum of it's factors which excludes the Given number.
+//Perfect number  : The Given number is equals to Sum of it's 
+//factors which excludes the Given number.
 
 //input is : 6 --> 1+ 2 + 3 = 6 --> true 
 //input is : 10 --> 1 + 2 + 5 = 8 --> false 
@@ -19,16 +20,15 @@ public class TestFindPerfectDemo7 {
 
 	static boolean findPerfect(int n) {
 		boolean status = false;
-
 		int sum = 0;
 
 		for (int i = 1; i <= n / 2; i++) {
 			if (n % i == 0) {
-				sum = sum + i;
+				sum += i;//sum = sum + i//1 2 3
 			}
 		}
-
-		if (sum == n) {
+		
+		if(sum == n) {
 			status = true;
 		}
 
@@ -42,9 +42,9 @@ public class TestFindPerfectDemo7 {
 		System.out.println("Enter a number : ");
 		int a = sc.nextInt();// 6
 
-		boolean status = findPerfect(a);
+		boolean flag = findPerfect(a);
 
-		if (status) {
+		if (flag) {
 			System.out.println("The Given number is Perfect ");
 		} else {
 			System.out.println("The Given number is not Perfect ");
