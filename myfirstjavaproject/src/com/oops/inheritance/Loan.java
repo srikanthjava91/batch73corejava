@@ -34,6 +34,10 @@ public class Loan {
 		int cibil = sc.nextInt();
 		return cibil;
 	}
+	
+	private int add() {
+		return 2;
+	}
 
 	Number getROI() {
 		double roi = 12.0;
