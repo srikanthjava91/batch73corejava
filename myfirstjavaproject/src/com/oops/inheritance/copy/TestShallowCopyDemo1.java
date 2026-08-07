@@ -6,6 +6,12 @@ class Student implements Cloneable {
 	Address address;
 
 	@Override
+	public String toString() {
+		return "Student info : SID " + sid 
+							+" Sname : " + sname;
+	}
+
+	@Override
 	protected Object clone() throws CloneNotSupportedException {
 		return super.clone();
 	}
@@ -33,32 +39,27 @@ public class TestShallowCopyDemo1 {
 		System.out.println("main method started !");
 
 		Address address = new Address("Hyderabad");
-		Student s1 = new Student(101, "Siddik", address);
+		Student s1 = new Student(101, "Rushikesh", address);
 
 		System.out.println(s1.sid);
 		System.out.println(s1.sname);
 		System.out.println(s1.address.city);
-		System.out.println("--------------------------");
+		System.out.println("-------------------------------------------");
 
 		Student s2 = (Student) s1.clone();
-
 		System.out.println(s2.sid);
 		System.out.println(s2.sname);
 		System.out.println(s2.address.city);
-		System.out.println("--------------------------");
+		System.out.println("-------------------------------------------");
 
 		s2.address.city = "Banglore";
-		System.out.println("*******************************");
-
-		System.out.println(s1.sid);
-		System.out.println(s1.sname);
-		System.out.println(s1.address.city);
-		System.out.println("--------------------------");
-
-		System.out.println(s2.sid);
-		System.out.println(s2.sname);
+		s2.sid = 103;
+		System.out.println(s2.sid);// 103
 		System.out.println(s2.address.city);
-		System.out.println("--------------------------");
+		System.out.println("-------------------------------------------");
+		System.out.println(s1.sid);// 101
+		System.out.println(s1.address.city);
+		System.out.println("-------------------------------------------");
 
 		System.out.println("main method ended !");
 	}

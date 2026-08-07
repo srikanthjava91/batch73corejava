@@ -1,7 +1,7 @@
 package com.oops.inheritance;
 
 //Child or sub or Derived 
-public class HomeLoan extends Loan {
+public class HomeLoan extends LoanImpl {
 
 	void homeLoanDocinfo() {
 		System.out.println("Home Loan documents have beeen received successfully !!");
@@ -73,7 +73,7 @@ public class HomeLoan extends Loan {
 	}
 
 	@Override
-	public Double getROI() {
+	public double getROI() {
 		double roi = 9.0;
 		return roi;
 	}
@@ -84,7 +84,7 @@ public class HomeLoan extends Loan {
 		String s1 = new String();
 		System.out.println(s1);
 
-		HomeLoan pl = new HomeLoan();
+		Loan pl = new HomeLoan();
 
 		boolean isValidPhone = pl.isValidPhone();
 		boolean isAadharValid = pl.isAadharValid();

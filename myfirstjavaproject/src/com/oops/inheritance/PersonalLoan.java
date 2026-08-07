@@ -3,7 +3,7 @@ package com.oops.inheritance;
 import java.util.Scanner;
 
 //Child or Sub or Derived class 
-public class PersonalLoan extends Loan {
+public class PersonalLoan extends LoanImpl {
 	static Scanner sc = new Scanner(System.in);
 	
 	@Override
@@ -28,7 +28,7 @@ public class PersonalLoan extends Loan {
 //		Scenario 2: Parent Object vs Parent Reference 
 //		By using Parent Object and Parent reference we can call 
 //		Only Parent class functionalities.
-		Loan l1 = new Loan();
+		LoanImpl l1 = new LoanImpl();
 
 //		Scenario 3 : Child Object vs Parent Reference 
 //		Q) Can we store Child Object into Parent Reference ..? Yes 
@@ -41,7 +41,7 @@ public class PersonalLoan extends Loan {
 //		Generally, By using Child Object & Parent Reference we can only Parent class functionalities 
 //		But, When we Override the method from Parent to Child even though it's point to Parent Reference 
 //		the method is executing from child at Runtime is the process DMD.(Abstraction)
-		Loan l2 = new PersonalLoan();
+		LoanImpl l2 = new PersonalLoan();
 		System.out.println(l2.hello());
 
 //		Scenario 4 
@@ -56,7 +56,7 @@ public class PersonalLoan extends Loan {
 //		which is ClassCastException : 
 //		RE : java.lang.ClassCastException: class com.oops.inheritance.Loan 
 //		cannot be cast to class com.oops.inheritance.PersonalLoan 
-		PersonalLoan pl2 =(PersonalLoan) new Loan();
+		PersonalLoan pl2 =(PersonalLoan) new LoanImpl();
 		pl2.personalLonDocinfo();
 		pl2.cibilInfo();
 		
