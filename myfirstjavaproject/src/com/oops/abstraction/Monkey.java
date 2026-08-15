@@ -2,13 +2,13 @@ package com.oops.abstraction;
 
 public class Monkey implements Animal {
 	
-	@Override
-	public void hello(){
-		System.out.println("hiiiiiiiiiiiiii");
-		System.out.println("hiiiiiiiiiiiiii");
-		System.out.println("hiiiiiiiiiiiiii");
-		System.out.println("hiiiiiiiiiiiiii");
-	}
+//	@Override
+//	public void hello(){
+//		System.out.println("hiiiiiiiiiiiiii");
+//		System.out.println("hiiiiiiiiiiiiii");
+//		System.out.println("hiiiiiiiiiiiiii");
+//		System.out.println("hiiiiiiiiiiiiii");
+//	}
 	
 	
 	static void breath() {
