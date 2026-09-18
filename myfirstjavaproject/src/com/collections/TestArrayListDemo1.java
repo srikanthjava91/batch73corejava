@@ -16,7 +16,7 @@ public class TestArrayListDemo1 {
 //		Q2) When we added 11th element what is next capacity ..? 
 //		ans : (Current Capacity * 3/2) or Current capacity + Half of the Current Capacity.
 
-		List<Integer> l1 = new ArrayList<>(15);
+		ArrayList<Integer> l1 = new ArrayList<>(15);
 
 		l1.add(7);
 		l1.add(18);
