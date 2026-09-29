@@ -21,23 +21,33 @@ public class TestMobile {
 		mobileList.add(m4);
 		mobileList.add(m5);
 
-		// Anonymous Inner class implements Comparator
-		Comparator<Mobile> c = new Comparator<Mobile>() {
-
-			@Override
-			public int compare(Mobile o1, Mobile o2) {
-//				if (o1.price < o2.price) {
-//					return -1;
-//				} else if (o1.price > o2.price) {
-//					return 1;
-//				} else {
-//					return 0;
-//				}
-				
-				return o1.brand.compareTo(o2.brand);
+		Comparator<Mobile> c = (o1, o2) -> {
+			if (o1.price < o2.price) {
+				return -1;
+			} else if (o1.price > o2.price) {
+				return 1;
+			} else {
+				return 0;
 			}
-
 		};
+
+		// Anonymous Inner class implements Comparator
+//		Comparator<Mobile> c = new Comparator<Mobile>() {
+//
+//			@Override
+//			public int compare(Mobile o1, Mobile o2) {
+		////				if (o1.price < o2.price) {
+////					return -1;
+////				} else if (o1.price > o2.price) {
+////					return 1;
+////				} else {
+////					return 0;
+////				}
+//				
+//				return o1.brand.compareTo(o2.brand);
+//			}
+//
+//		};
 
 		Collections.sort(mobileList, c);
 

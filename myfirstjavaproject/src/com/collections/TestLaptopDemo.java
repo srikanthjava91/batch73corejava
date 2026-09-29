@@ -34,8 +34,9 @@ public class TestLaptopDemo {
 		laptopList.add(l3);
 		laptopList.add(l4);
 		laptopList.add(l5);
-		
-		//The method sort(List<T>) in the type Collections is not applicable for the arguments (List<Laptop>)
+
+		// The method sort(List<T>) in the type Collections is not applicable for the
+		// arguments (List<Laptop>)
 		Collections.sort(laptopList);
 
 		for (Laptop l : laptopList) {
